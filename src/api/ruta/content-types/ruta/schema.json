@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rutas",
+  "info": {
+    "singularName": "ruta",
+    "pluralName": "rutas",
+    "displayName": "Rutas"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ciudades_imperiales": {
+      "type": "text"
+    }
+  }
+}
