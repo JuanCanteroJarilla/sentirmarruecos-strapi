@@ -11,14 +11,21 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "location": {
+    "name": {
       "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
     },
     "description": {
       "type": "blocks"
     },
-    "routes": {
-      "type": "blocks"
+    "day": {
+      "displayName": "day",
+      "type": "component",
+      "repeatable": true,
+      "component": "itineraries.day"
     }
   }
 }
