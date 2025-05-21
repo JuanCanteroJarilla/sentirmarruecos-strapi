@@ -4,14 +4,21 @@
   "info": {
     "singularName": "ruta",
     "pluralName": "rutas",
-    "displayName": "Rutas"
+    "displayName": "Rutas",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "attributes": {
-    "ciudades_imperiales": {
-      "type": "text"
+    "location": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "routes": {
+      "type": "blocks"
     }
   }
 }

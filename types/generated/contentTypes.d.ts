@@ -376,6 +376,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiRutaRuta extends Struct.CollectionTypeSchema {
   collectionName: 'rutas';
   info: {
+    description: '';
     displayName: 'Rutas';
     pluralName: 'rutas';
     singularName: 'ruta';
@@ -384,14 +385,16 @@ export interface ApiRutaRuta extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    ciudades_imperiales: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::ruta.ruta'> &
       Schema.Attribute.Private;
+    location: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    routes: Schema.Attribute.Blocks;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
