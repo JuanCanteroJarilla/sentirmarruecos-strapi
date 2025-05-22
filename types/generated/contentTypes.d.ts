@@ -373,35 +373,6 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
-export interface ApiRutaRuta extends Struct.CollectionTypeSchema {
-  collectionName: 'rutas';
-  info: {
-    description: '';
-    displayName: 'Rutas';
-    pluralName: 'rutas';
-    singularName: 'ruta';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    day: Schema.Attribute.Component<'itineraries.day', true>;
-    description: Schema.Attribute.Blocks;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::ruta.ruta'> &
-      Schema.Attribute.Private;
-    name: Schema.Attribute.String;
-    publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'name'>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -911,7 +882,6 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
-      'api::ruta.ruta': ApiRutaRuta;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
