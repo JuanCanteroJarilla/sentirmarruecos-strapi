@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rutas",
+  "info": {
+    "singularName": "ruta",
+    "pluralName": "rutas",
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "day": {
+      "displayName": "day",
+      "type": "component",
+      "repeatable": true,
+      "component": "itineraries.day"
+    }
+  }
+}
