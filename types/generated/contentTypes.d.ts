@@ -389,7 +389,7 @@ export interface ApiRutaRuta extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     day: Schema.Attribute.Component<'itineraries.day', true>;
-    description: Schema.Attribute.Blocks;
+    description: Schema.Attribute.Text;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::ruta.ruta'> &
       Schema.Attribute.Private;
