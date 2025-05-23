@@ -1,15 +1,16 @@
 {
   "collectionName": "components_itineraries_days",
   "info": {
-    "displayName": "day"
+    "displayName": "day",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "title": {
       "type": "string"
     },
-    "content": {
-      "type": "blocks"
+    "dayDescription": {
+      "type": "text"
     }
   }
 }
