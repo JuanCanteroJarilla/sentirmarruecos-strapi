@@ -26,6 +26,9 @@
     },
     "description": {
       "type": "text"
+    },
+    "accommodation": {
+      "type": "text"
     }
   }
 }
